@@ -7,7 +7,7 @@ export default function Cart() {
   if (data.length === 0) {
     return (
       <div>
-        <div className="m-5 w-100 text-center fs-3">The Cart is Empty!</div>
+        <div className="m-5 w-100 text-center fs-3 text-success">The Cart is Empty!</div>
       </div>
     );
   }
@@ -63,7 +63,7 @@ export default function Cart() {
                 <td>{food.size}</td>
                 <td>{food.price}</td>
                 <td>
-                  <button type="button" className="btn p-0">
+                  <button type="button" className="btn p-0 bg-success">
                     <DeleteIcon
                       onClick={() => {
                         dispatch({ type: "REMOVE", index: index });
@@ -76,7 +76,7 @@ export default function Cart() {
           </tbody>
         </table>
         <div>
-          <h1 className="fs-2">Total Price: {totalPrice}/-</h1>
+          <h1 className="fs-2 text-success">Total Price: {totalPrice}/-</h1>
         </div>
         <div>
           <button className="btn bg-success mt-5 " onClick={handleCheckOut}>
